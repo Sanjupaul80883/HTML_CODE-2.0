@@ -1,0 +1,83 @@
+             <!--Anatomy of an HTML document  -->
+<!DOCTYPE html>
+
+<!-- This is root element  -->
+<html lang="en">
+    <!-- Description of the web page. Not visible in web page-->
+    <!-- It will help browser engin at the of search. -->
+<head>
+    <!-- This character  set  "UTF-8" for document can support most of human written language  -->
+    <meta charset="utf8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Describe Meta data about this document -->
+    <meta name="author" content="Sanju Paul">
+    <meta name="about" content="In this page I want to describe Basic fundamental information about anatomy of html document and anatomy of html element">
+    <!-- Title appear in browser tab. At the time of bookmarked it help.-->
+    <title>MDN Getting start with HTML</title>
+</head>
+<!-- This element is visible in the webpage. Example are text, image, video, audio, table and input. -->
+<body>
+    <!-- At the time of writing element and it content if we use more space. When it rendered in the web page it take only one whitespace -->
+                                    <!-- Anatomy of an HTML element -->
+    <!-- i) anatomy of out element is opening and closing tag -->
+    <p> This is opening tag  (With contain ) and  closing tag</p>
+    <em> EM tag is make a line italic text </em>
+    <!-- Nesting element -->
+    <!-- strong element have strong text formatting  -->
+     <p>Strong element is making strong the dolor word.  <strong> dolor </strong> sit amet.</p>
+    <hr>
+    <!-- Block level element  -->
+    <P>Block level element </P>
+    <h5>Block level element </h5>
+
+    <!-- Inline elements -->
+    <em> EM Inline element </em><em>one </em><em> Two</em>
+    <p>a anchor tag is also a inline element <a href="#"> Google link</a>
+     <strong>Strong is also a inline element </strong></p>
+    <hr>
+     <!-- Void element  -->
+     <p>Void element not containing opening and closing tag. It is used for insert/embed something in the document such as img tag </p>
+     <img src="https://media.istockphoto.com/id/158533489/photo/html5.jpg?s=612x612&w=is&k=20&c=D-OzHrixjW0hyqlaTVAGl5TFTSvwouBV0Wpyr_yy_L8=" alt="HTML 5 image">
+    <hr>
+     <!-- Attributes -->
+    <p>Attributes is not displayed in webpage <br>
+    it is used for target the element with style information <br>
+    and written between opening tag</p>
+    <p class="target "> Class is used to target the element</p>
+    <hr>
+    <!-- Anchor tag have href title and target element -->
+    <p>Anchor tag have href title and target element</p>
+    <p>title Attributes specifies extra information about the link</p>
+    <a href="https://www.google.com/" target="_blank" title="This is google link">Open google</a>
+    <br>
+    <!-- Boolean attributes -->
+    <p>Disable attributes is used for not to display</p>
+    <input type="text" id="one" disabled>
+    <input type="text" >
+    <hr>
+    <!-- Omitting quotes around attributes -->
+    <a href=https://www.google.com>With out quotes around attributes</a>
+    <br>
+    <a href="https://www.google.com">With double quotes around attributes</a>
+    <br>
+    <a href='https://www.google.com'>With single quotes around attributes</a>
+    <br>
+    <a href='https://www.google.com'>Make sure you don't mix single quotes and double quotes</a>
+    <br>
+    <a href='https://www.google.com' class="anchor">With single quotes and with double quotes in attributes</a>
+    <br>
+    <hr>
+    <hr>
+                                <!-- Special character of html are < > " ' and & this character -->
+                                <!-- If we directly use this it giver error  -->
+    <!-- Process to write special char in content - start with ampersand (&) and end with semicolon ; -->
+       <p> 5 &gt; 3 and 2 &lt; 5</p>    
+       <p>Author of the book are &quot; Rabindranath Tagor &quot; &amp; &apos; Abanindronath Tagor &apos; </p>                      
+       <p>{<!-- This comment -->} Browser ignore comment </p>
+
+
+   <!-- utf8 is a universal character set that can rendered all king of human written language, But if use another character set that not be capable to render all language  -->
+   <p>ご飯が熱い。</p>
+</body>
+</html>
