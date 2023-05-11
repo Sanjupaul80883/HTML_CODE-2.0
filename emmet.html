@@ -5,12 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmet class</title>
+    <style>
+        
+    </style>
 </head>
 <body>
+    <!-- Nesting operators -->
+    <!-- CHILD -->
+    <!-- div>ul -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- SIBLING -->
+    div+p+bq
+    <div></div>
+    <p></p>
+    <blockquote></blockquote>
+
+    <!-- CLIMB UP ^ -->
+    <!-- div+div>p>span+em -->
+    <div></div>
+    <div>
+        <p><span></span><em></em></p>
+    </div>
+
+    <!-- div+dib>p>span+em^bq -->
+    <div></div>
+    <dib>
+        <p><span></span><em></em></p>
+        <blockquote></blockquote>
+    </dib>
+
+    <!-- div+div>li>p+em^^^bq -->
+    <div></div>
+    <div>
+        <li>
+            <p></p>
+            <em></em>
+        </li>
+    </div>
+    <blockquote></blockquote>
+
+    <!-- Multiplication  -->
+    <!-- ul>li*5 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!-- Grouping -->
+    div>(header>ul>li*5)+footer>ul>l*2
+    <div>
+        <header>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </header>
+        <footer>
+            <ul>
+                <l></l>
+                <l></l>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Grouping () -->
+    (div>dl>(dt_dd)*3)+footer
+    <div>
+        <dl>
+            <dt_dd></dt_dd>
+            <dt_dd></dt_dd>
+            <dt_dd></dt_dd>
+        </dl>
+    </div>
+    <footer></footer>
+
+    <!-- Attribute operator -->
+    <!-- div#header+main.class1.class2#main_section+footer.footer -->
+    <div id="header"></div>
+    <main class="class1 class2" id="main_section"></main>
+    <footer class="footer"></footer>
+
+    <!-- Custom attribute  -->
+    td[title="hellow world " colspan=3]
+    <td title="hellow world " colspan="3"></td>
+
+    <!-- Item numbering $ -->
+    <!-- ul>li.item$*5 -->
+    <ul>
+        <li class="tiem1"></li>
+        <li class="tiem2"></li>
+        <li class="tiem3"></li>
+        <li class="tiem4"></li>
+        <li class="tiem5"></li>
+    </ul>
+    <!-- ul>li.item$*5{no of item $} -->
+    <ul>
+        <li class="item1">no of item 1</li>
+        <li class="item2">no of item 2</li>
+        <li class="item3">no of item 3</li>
+        <li class="item4">no of item 4</li>
+        <li class="item5">no of item 5</li>
+    </ul>
+    
+    <!-- ul>li.item$$$*5 -->
+    <ul>
+        <li class="item001"></li>
+        <li class="item002"></li>
+        <li class="item003"></li>
+        <li class="item004"></li>
+        <li class="item005"></li>
+    </ul>
+
+    <!-- changing number base and direction -->
+    <!-- ul>li.item$@-*5 -->
+    <ul>
+        <li class="item5"></li>
+        <li class="item4"></li>
+        <li class="item3"></li>
+        <li class="item2"></li>
+        <li class="item1"></li>
+    </ul>
+    
+    <!-- ul>li.item$@-*5{item$@-} -->
+    <ul>
+        <li class="item5">item5</li>
+        <li class="item4">item4</li>
+        <li class="item3">item3</li>
+        <li class="item2">item2</li>
+        <li class="item1">item1</li>
+    </ul>
+
+    <!-- ul>li.item$@3*5 -->
+    <ul>
+        <li class="item3"></li>
+        <li class="item4"></li>
+        <li class="item5"></li>
+        <li class="item6"></li>
+        <li class="item7"></li>
+    </ul>
+
+    <!-- ul>li.item$@-3*5 -->
+    <ul>
+        <li class="item7"></li>
+        <li class="item6"></li>
+        <li class="item5"></li>
+        <li class="item4"></li>
+        <li class="item3"></li>
+    </ul>
+    
+    <!-- Text {} -->
+    <!-- p{lorem5} -->
+    <p>lorem5</p>
+    
+    
+
+
+
     <!-- p.className -->
     <p class="className"></p>
     <!-- p.id -->
     <p class="idname"></p>
+    <!-- add element in tag -->
+    <!-- p{lorem is not working} -->
+    <p>lorem is not working</p>
+
     <!-- Create navigation bar by emmet -->
     <!-- header>(div.left>img.logo+p.logoname)+div.right>input.searchBox+button.loginbtn -->
     <header>
@@ -20,6 +189,85 @@
         </div>
         <div class="right"><input type="text" class="searchBox"><button class="loginbtn"></button></div>
     </header>
-    
+    <!-- create sibling by emmet -->
+    <!-- div>p>span^a -->
+    <div>
+        <p><span></span></p>
+        <a href=""></a>
+    </div>
+
+          <!-- vs -->
+    <!-- div>p>span+a -->
+    <div>
+        <p><span></span><a href=""></a></p>
+    </div>
+
+
+    <!-- div>(p>span+a)*5 -->
+    <div>
+        <p><span></span><a href="www.google.com">google link1</a>paragraph</p>
+        <p><span></span><a href="www.google.com">google link1</a>paragraph</p>
+        <p><span></span><a href="www.google.com">google link1</a>paragraph</p>
+        <p><span></span><a href="www.google.com">google link1</a>paragraph</p>
+        <p><span></span><a href="www.google.com">google link1</a>paragraph</p>
+    </div>
+
+    <!-- ol>(li.list_item$*5{itemes$}) -->
+    <ol>
+        <li class="list_item1">itemes1=1</li>
+        <li class="list_item2">itemes2=2</li>
+        <li class="list_item3">itemes3=3</li>
+        <li class="list_item4">itemes4=4</li>
+        <li class="list_item5">itemes5=5</li>
+    </ol>
+
+    <!-- ul#nav>li.item$*5>a.menu${home$} -->
+    <ul id="nav">
+        <li class="item1"><a href="" class="menu1">home1</a></li>
+        <li class="item2"><a href="" class="menu2">home2</a></li>
+        <li class="item3"><a href="" class="menu3">home3</a></li>
+        <li class="item4"><a href="" class="menu4">home4</a></li>
+        <li class="item5"><a href="" class="menu5">home5</a></li>
+    </ul>
+
+    <!-- table.table>tr.row$*5>td{data$}*5 -->
+    <table id="table" style="border: 1px solid red; padding: 10px;">
+        <tr class="row-no1" >
+            <td class="data">data1</td>
+            <td class="data">data2</td>
+            <td class="data">data3</td>
+            <td class="data">data4</td>
+            <td class="data">data5</td>
+        </tr> 
+        <tr class="row-no2"> 
+            <td class="data">data1 </td>
+            <td class="data">data2 </td>
+            <td class="data">data3 </td>
+            <td class="data">data4 </td>
+            <td class="data">data5 </td>
+        </tr> 
+        <tr class="row-no3"> 
+            <td class="data">data1 </td>
+            <td class="data">data2 </td>
+            <td class="data">data3 </td>
+            <td class="data">data4 </td>
+            <td class="data">data5 </td>
+        </tr> 
+        <tr class="row-no4"> 
+            <td class="data">data1</td>
+            <td class="data">data2 </td>
+            <td class="data">data3 </td>
+            <td class="data">data4 </td>
+            <td class="data">data5 </td>
+        </tr> 
+        <tr class="row-no5"> 
+            <td class="data">data5 </td>
+            <td class="data">data1 </td>
+            <td class="data">data2 </td>
+            <td class="data">data3 </td>
+            <td class="data">data4 </td>
+        </tr>
+    </table>
+
 </body>
 </html>
