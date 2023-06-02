@@ -1,0 +1,45 @@
+*{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+aside{
+    width: 250px;
+}
+.sidebar{
+    background-color: #24353a;
+    width: 200px;
+    height: 100vh;
+    float: left;
+}
+.logo_image{
+    width: 100%;
+    background-color:#24353a;
+}
+
+
+.sidebar_lists li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    background-color: #24353a;
+    border-bottom: 2px solid #212121;
+}
+.body_description{
+    
+    background-color: #fff;
+    color: #fff;
+    margin: 20px;
+}
+.heading_name{
+    margin: 50px;
+    text-align: center;
+}
+.pw_banner{
+    width: 500px;
+    
+    margin: 50px 350px;
+}
