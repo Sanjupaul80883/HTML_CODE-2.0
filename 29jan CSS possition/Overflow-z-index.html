@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow and z-index</title>
+    <style>
+        p{
+            height: 250px;
+            width: 250px;
+            border: 2px solid red;
+            /* overflow: visible;  */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow: auto; */
+        }
+        .one{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            position: absolute;
+            top: 1px;
+            z-index: -1;
+        }
+        .two{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(192, 240, 20);
+            position: absolute;
+            top: 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overflow and Z index -->
+    <p> Hidden Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem eos! Quam reiciendis atque aspernatur beatae cumque num</p>
+    <div class="one"></div>
+    <div class="two"></div>
+    
+</body>
+</html>
